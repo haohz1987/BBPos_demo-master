@@ -1,0 +1,191 @@
+-- Merging decision tree log ---
+manifest
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\2852d139b48ddb5d80165e46c90b2f8c\AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:17:1-28:12
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:17:1-31:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:1-46:12
+	package
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:4:5-33
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+	android:versionName
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:6:5-32
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+	xmlns:tools
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:3:5-51
+	xmlns:android
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:5:5-28
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+uses-permission#android.permission.BLUETOOTH
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:12:5-68
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:12:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:13:5-74
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:13:22-71
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:14:5-71
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:14:22-68
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:15:5-81
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:15:22-78
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:16:22-78
+application
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:18:5-44:19
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:29:5-20
+	android:label
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:22:9-41
+	android:debuggable
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:20:9-34
+	tools:ignore
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:24:9-42
+	android:icon
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:21:9-45
+	android:allowBackup
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:19:9-35
+	android:theme
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:23:9-40
+activity#com.bbpos.bbdevice.MainActivity
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:25:9-39:20
+	android:label
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:27:13-45
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:26:13-59
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:28:13-31:29
+action#android.intent.action.MAIN
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:29:17-69
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:29:25-66
+category#android.intent.category.LAUNCHER
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:30:17-77
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:30:27-74
+intent-filter#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:32:13-34:29
+action#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:33:17-90
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:33:25-87
+meta-data#android.hardware.usb.action.USB_DEVICE_ATTACHED
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:36:13-38:61
+	android:resource
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:38:17-58
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:37:17-79
+activity#com.bbpos.bbdevice.ApduActivity
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:40:9-50
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:40:19-47
+activity#com.bbpos.bbdevice.CAPKActivity
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:41:9-49
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:41:19-46
+activity#com.bbpos.bbdevice.GprsWifiActivity
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:42:9-53
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:42:19-50
+activity#com.bbpos.bbdevice.NfcActivity
+ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:43:9-48
+	android:name
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml:43:19-45
+uses-sdk
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\2852d139b48ddb5d80165e46c90b2f8c\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\2852d139b48ddb5d80165e46c90b2f8c\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:21:5-23:58
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		ADDED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\2852d139b48ddb5d80165e46c90b2f8c\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:recyclerview-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\recyclerview-v7-25.3.1.aar\2852d139b48ddb5d80165e46c90b2f8c\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:animated-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\7655f9beb1eabaf4d23ef0ee326be076\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-vector-drawable:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\170933246ade68fdcc2ed4b6699d45be\AndroidManifest.xml:22:5-24:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-v4:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\689b0679ec026d2f2cb5acdacfd7135b\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-fragment:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\958de36a7837a3aacfec75170422e108\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-ui:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\69df53f4aa6b22b5fd775cb659affbc3\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-media-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\897789ac9588e5f392ff2cad1c695714\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-core-utils:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\a14e6a1e9cba17b8fcd46c6816f3c66a\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:25:5-27:34
+MERGED from [com.android.support:support-compat:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\9bcce55604ee4215ec852d715bc219cd\AndroidManifest.xml:25:5-27:34
+	android:value
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:27:9-31
+	android:name
+		ADDED from [com.android.support:appcompat-v7:25.3.1] C:\Users\hzhao\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\1bc11fa6370cbe917eaa291362812e27\AndroidManifest.xml:26:9-47

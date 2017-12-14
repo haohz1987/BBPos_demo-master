@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Thu Dec 14 16:12:24 CST 2017
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\hzhao\\Desktop\\BBPos_demo-master\\bbdevice-example\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+0.path=classes.dex
+0.set=DEX
+count=1

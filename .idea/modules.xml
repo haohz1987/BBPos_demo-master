@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BBPos_demo-master.iml" filepath="$PROJECT_DIR$/BBPos_demo-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bbdevice-example/bbdevice-example.iml" filepath="$PROJECT_DIR$/.idea/modules/bbdevice-example/bbdevice-example.iml" />
+      <module fileurl="file://C:\Users\hzhao\Desktop\BBpos\bbdevice-example\bbdevice-example.iml" filepath="C:\Users\hzhao\Desktop\BBpos\bbdevice-example\bbdevice-example.iml" />
+    </modules>
+  </component>
+</project>

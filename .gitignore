@@ -1,0 +1,11 @@
+
+/gen/
+/bin/
+./tags
+./cscope.*
+bin/class/
+*.class
+/build
+/gradle/
+*.gradle
+gradle*

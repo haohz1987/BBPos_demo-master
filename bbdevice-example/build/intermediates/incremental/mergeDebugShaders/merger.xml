@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="3"><dataSet config="main"><source path="C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\main\shaders"/></dataSet><dataSet config="debug"><source path="C:\Users\hzhao\Desktop\BBPos_demo-master\bbdevice-example\src\debug\shaders"/></dataSet></merger>
