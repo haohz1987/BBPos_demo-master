@@ -4,8 +4,8 @@
     <string name="key_number">0123456789ABCDEFFEDCBA9876543210</string>
     <string name="key_number_s">0123456789ABCDEF</string>
     <string name="versionCode">1</string>
-    <string name="versionName">3.2.2</string>
-    <string name="app_name">BBDevice3.2.2</string>
+    <string name="versionName">3.3.0</string>
+    <string name="app_name">BBDevice3.3.0</string>
     <string name="please_insert_card">Please insert card</string>
     <string name="please_swipe_card">Please swipe card</string>
     <string name="please_swipe_insert_card">Please swipe/insert card</string>

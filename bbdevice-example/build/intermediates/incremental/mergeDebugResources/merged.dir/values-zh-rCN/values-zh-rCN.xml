@@ -29,7 +29,7 @@
     <string name="apdu_failed">APDU Failed</string>
     <string name="apdu_result">APDU结果：</string>
     <string name="apn">APN : </string>
-    <string name="app_name">BBDevice3.2.2</string>
+    <string name="app_name">BBDevice3.3.0</string>
     <string name="app_version">应用程序版本：</string>
     <string name="application_expired">应用已过期</string>
     <string name="approved">已批准</string>
@@ -110,7 +110,7 @@
     <string name="connecting_bluetooth_4">蓝牙4连接中…</string>
     <string name="connection">连接</string>
     <string name="control_led">控制LED</string>
-    <string name="control_led_fail">控制LED失敗</string>
+    <string name="control_led_fail">控制LED失败</string>
     <string name="control_led_success">控制LED成功</string>
     <string name="coprocessor_bootloader_version">協處理器引導程序版本: </string>
     <string name="coprocessor_version">副处理器固件版本：</string>
@@ -134,7 +134,7 @@
     <string name="disable_account_selection_fail">关闭帳戶選取失败</string>
     <string name="disable_account_selection_success">关闭帳戶選取成功</string>
     <string name="disable_inject_master_key">關閉灌入主密钥</string>
-    <string name="disable_inject_master_key_fail">关闭灌入主密钥失敗</string>
+    <string name="disable_inject_master_key_fail">关闭灌入主密钥失败</string>
     <string name="disable_inject_master_key_success">关闭灌入主密钥成功</string>
     <string name="disable_input_amount_fail">关闭金额输入失败</string>
     <string name="disable_input_amount_success">关闭金额输入成功</string>
@@ -196,7 +196,7 @@
     <string name="initializing">正在初始化…</string>
     <string name="initializing_session">初始化会话中...</string>
     <string name="inject_master_key">灌入主密钥</string>
-    <string name="inject_master_key_fail">灌入主密钥失敗</string>
+    <string name="inject_master_key_fail">灌入主密钥失败</string>
     <string name="inject_master_key_success">灌入主金钥成功</string>
     <string name="inject_session_key">灌入会议金钥</string>
     <string name="inject_session_key_failed">灌入会议金钥失败</string>
@@ -216,7 +216,7 @@
     <string name="kek">KEK</string>
     <string name="key_error">加密密钥错误</string>
     <string name="key_exchange">密钥交換</string>
-    <string name="key_exchange_fail">密钥交換失敗</string>
+    <string name="key_exchange_fail">密钥交換失败</string>
     <string name="key_exchange_success">密钥交換成功</string>
     <string name="key_number">0123456789ABCDEFFEDCBA9876543210</string>
     <string name="key_number_s">0123456789ABCDEF</string>
@@ -242,12 +242,12 @@
     <string name="mk">Master Key</string>
     <string name="model_name">型号名称: </string>
     <string name="modulus">Modulus:</string>
-    <string name="multiple_cards_detected">侦测到多於一张卡</string>
+    <string name="multiple_cards_detected">侦测到多于一张卡</string>
     <string name="ndef_record">NDEF记录 :</string>
     <string name="nfc">NFC</string>
     <string name="nfc_card_detection_result">NFC卡偵測结果 : </string>
     <string name="nfc_card_uid">啪卡UID : </string>
-    <string name="nfc_data_exchange_fail">NFC资料交换失敗</string>
+    <string name="nfc_data_exchange_fail">NFC资料交换失败</string>
     <string name="nfc_data_exchange_read_1st">NFC资料交换 (读第一个记录)</string>
     <string name="nfc_data_exchange_read_next">NFC资料交换 (读下一个记录)</string>
     <string name="nfc_data_exchange_success">NFC资料交换成功</string>
@@ -279,15 +279,15 @@
     <string name="pin_try_limit_exceeded">超过入PIN尝试次数</string>
     <string name="please_confirm_amount">请确认金额</string>
     <string name="please_insert_card">请插卡</string>
-    <string name="please_insert_tap_card">請插卡/拍卡</string>
+    <string name="please_insert_tap_card">请插卡/拍卡</string>
     <string name="please_power_on_icc">Please power on ICC first</string>
     <string name="please_press_reprint_or_print_next">请按重印或印下一张</string>
     <string name="please_select_app">请选择App</string>
     <string name="please_swipe_card">请刷卡</string>
     <string name="please_swipe_insert_card">请刷卡/插卡</string>
-    <string name="please_swipe_insert_tap_card">請刷卡/插卡/拍卡</string>
+    <string name="please_swipe_insert_tap_card">请刷卡/插卡/拍卡</string>
     <string name="please_swipe_or_insert">请插入或刷卡</string>
-    <string name="please_swipe_tap_card">請刷卡/拍卡</string>
+    <string name="please_swipe_tap_card">请刷卡/拍卡</string>
     <string name="please_tap_card">请拍卡</string>
     <string name="please_use_chip_card">请使用芯片卡</string>
     <string name="please_wait">请等候…</string>
@@ -471,7 +471,7 @@
     <string name="update_wifi_setting">Update WIFI</string>
     <string name="update_wifi_setting_fail">Update WIFI setting fail</string>
     <string name="update_wifi_setting_success">Update WIFI setting success</string>
-    <string name="updating_aid_please_wait">更新AID中。請等待…</string>
+    <string name="updating_aid_please_wait">更新AID中。请等待…</string>
     <string name="url">URL : </string>
     <string name="usb">USB：</string>
     <string name="usb_connected">USB連接</string>
@@ -490,7 +490,7 @@
     <string name="vendor_id_hex">供应商ID (HEX)：</string>
     <string name="verify_id">请验证持卡人身份</string>
     <string name="versionCode">1</string>
-    <string name="versionName">3.2.2</string>
+    <string name="versionName">3.3.0</string>
     <string name="volume_warning_not_accepted">未接受音量警告</string>
     <string name="wait">请稍候…</string>
     <string name="welcome">欢迎</string>

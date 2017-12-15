@@ -4,15 +4,15 @@
     <string name="key_number">0123456789ABCDEFFEDCBA9876543210</string>
     <string name="key_number_s">0123456789ABCDEF</string>
     <string name="versionCode">1</string>
-    <string name="versionName">3.2.2</string>
-    <string name="app_name">BBDevice3.2.2</string>
+    <string name="versionName">3.3.0</string>
+    <string name="app_name">BBDevice3.3.0</string>
     <string name="please_insert_card">请插卡</string>
     <string name="please_swipe_card">请刷卡</string>
     <string name="please_swipe_insert_card">请刷卡/插卡</string>
     <string name="please_tap_card">请拍卡</string>
-    <string name="please_swipe_tap_card">請刷卡/拍卡</string>
-	<string name="please_insert_tap_card">請插卡/拍卡</string>
-	<string name="please_swipe_insert_tap_card">請刷卡/插卡/拍卡</string>
+    <string name="please_swipe_tap_card">请刷卡/拍卡</string>
+	<string name="please_insert_tap_card">请插卡/拍卡</string>
+	<string name="please_swipe_insert_tap_card">请刷卡/插卡/拍卡</string>
     <string name="no_card_detected">刷卡或插卡已超时</string>
     <string name="icc_card_inserted">ICC卡已插入</string>
     <string name="card_inserted">不是正确的ICC卡\n请刷卡</string>
@@ -150,7 +150,7 @@
     <string name="insert_or_swipe_card_or_tap_another_card">请插卡/刷卡或拍其他卡</string>
     <string name="insert_swipe_or_try_another_card">请插卡/刷卡或试其他卡</string>
     <string name="insert_or_swipe_card">请插卡或刷卡</string>
-    <string name="multiple_cards_detected">侦测到多於一张卡</string>
+    <string name="multiple_cards_detected">侦测到多于一张卡</string>
      <string name="application_expired">应用已过期</string>
     <string name="show_thank_you">显示谢谢</string>
     <string name="pin_try_limit_exceeded">超过入PIN尝试次数</string>
@@ -307,11 +307,11 @@
     <string name="inject_session_key">灌入会议金钥</string>
     <string name="disable_inject_master_key">關閉灌入主密钥</string>
     <string name="inject_master_key_success">灌入主金钥成功</string>
-    <string name="inject_master_key_fail">灌入主密钥失敗</string>
+    <string name="inject_master_key_fail">灌入主密钥失败</string>
     <string name="disable_inject_master_key_success">关闭灌入主密钥成功</string>
-    <string name="disable_inject_master_key_fail">关闭灌入主密钥失敗</string>
+    <string name="disable_inject_master_key_fail">关闭灌入主密钥失败</string>
     <string name="key_exchange_success">密钥交換成功</string>
-    <string name="key_exchange_fail">密钥交換失敗</string>
+    <string name="key_exchange_fail">密钥交換失败</string>
     <string name="key_exchange">密钥交換</string>
     <string name="message">信息：</string>
     <string name="data">资料:</string>
@@ -446,7 +446,7 @@
     <string name="nfc_data_exchange_read_1st">NFC资料交换 (读第一个记录)</string>
     <string name="nfc_data_exchange_read_next">NFC资料交换 (读下一个记录)</string>
     <string name="nfc_data_exchange_success">NFC资料交换成功</string>
-    <string name="nfc_data_exchange_fail">NFC资料交换失敗</string>
+    <string name="nfc_data_exchange_fail">NFC资料交换失败</string>
     <string name="ndef_record">NDEF记录 :</string>
     <string name="nfc_card_detection_result">NFC卡偵測结果 : </string>
     <string name="nfc_tag_information">NFC卡标籤资讯 tag information : </string>
@@ -461,7 +461,7 @@
     <string name="update_aid_fail">更新AID失败</string>
     <string name="manual_pan_entry">手動輸入PAN</string>
     <string name="reading_aid">读取AID中&#8230;</string>
-    <string name="updating_aid_please_wait">更新AID中。請等待&#8230;</string>
+    <string name="updating_aid_please_wait">更新AID中。请等待&#8230;</string>
     <string name="pos_entry_mode">POS Entry Mode</string>
     <string name="power_down">電源關閉</string>
     <string name="power_button_pressed">電源制被按下</string>
@@ -475,6 +475,6 @@
     <string name="standby">待機模式</string>
     <string name="led">LED</string>
     <string name="control_led_success">控制LED成功</string>
-    <string name="control_led_fail">控制LED失敗</string>
+    <string name="control_led_fail">控制LED失败</string>
     <string name="control_led">控制LED</string>
 </resources>
