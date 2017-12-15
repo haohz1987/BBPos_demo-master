@@ -1,4 +1,4 @@
-package com.bbpos.bbdevice;
+package com.bbpos.bbdevice.util;
 
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;

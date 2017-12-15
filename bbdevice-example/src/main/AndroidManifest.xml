@@ -62,6 +62,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme"
+        android:name=".MyApp"
         tools:ignore="HardcodedDebugMode">
         <activity
             android:name="com.bbpos.bbdevice.MainActivity"

@@ -1,7 +1,7 @@
-package com.bbpos.bbdevice;
+package com.bbpos.bbdevice.util;
 
 public class Utils {
-	protected static String encodeNdefFormat(String hexString) {
+	public static String encodeNdefFormat(String hexString) {
 		String result = "";
 		String length = Integer.toHexString(hexString.length() + 3);
 		while (length.length() % 2 != 0) {

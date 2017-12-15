@@ -14,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bbpos.bbdevice.util.log.HLog;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -21,127 +22,142 @@ import java.io.FileOutputStream;
 import java.util.Locale;
 
 public class MainActivity extends BaseActivity {
+    protected static String TAG = "MainActivity";
 
-	protected static String webAutoConfigString = "";
-	protected static boolean isLoadedLocalSettingFile = false;
-	protected static boolean isLoadedWebServiceAutoConfig = false;
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    protected static String webAutoConfigString = "";
+    protected static boolean isLoadedLocalSettingFile = false;
+    protected static boolean isLoadedWebServiceAutoConfig = false;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 //		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);
 
-		((TextView) findViewById(R.id.modelTextView)).setText(Build.MANUFACTURER.toUpperCase(Locale.ENGLISH) + " - " + Build.MODEL + " (Android " + Build.VERSION.RELEASE + ")");
+        ((TextView) findViewById(R.id.modelTextView)).setText(Build.MANUFACTURER.toUpperCase(Locale.ENGLISH) + " - " + Build.MODEL + " (Android " + Build.VERSION.RELEASE + ")");
 
-		fidSpinner = (Spinner) findViewById(R.id.fidSpinner);
-		startButton = (Button) findViewById(R.id.startButton);
-		amountEditText = (EditText) findViewById(R.id.amountEditText);
-		statusEditText = (EditText) findViewById(R.id.statusEditText);
+        fidSpinner = (Spinner) findViewById(R.id.fidSpinner);
+        startButton = (Button) findViewById(R.id.startButton);
+        amountEditText = (EditText) findViewById(R.id.amountEditText);
+        statusEditText = (EditText) findViewById(R.id.statusEditText);
 
-		MyOnClickListener myOnClickListener = new MyOnClickListener();
-		startButton.setOnClickListener(myOnClickListener);
+        MyOnClickListener myOnClickListener = new MyOnClickListener();
+        startButton.setOnClickListener(myOnClickListener);
+        findViewById(R.id.checkButton).setOnClickListener(myOnClickListener);
+        findViewById(R.id.startEmv).setOnClickListener(myOnClickListener);
 
-		String[] fids = new String[] { "FID22", "FID36", "FID46", "FID54", "FID55", "FID60", "FID61", "FID64", "FID65", };
-		fidSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.my_spinner_item, fids));
-		fidSpinner.setSelection(5);
+        String[] fids = new String[]{"FID22", "FID36", "FID46", "FID54", "FID55", "FID60", "FID61", "FID64", "FID65",};
+        fidSpinner.setAdapter(new ArrayAdapter<String>(this, R.layout.my_spinner_item, fids));
+        fidSpinner.setSelection(5);
 
-		currentActivity = this;
-		
-		try {
-			String filename = "settings.txt";
-			String inputDirectory = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.bbpos.bbdevice.ui/";
-			
-			FileInputStream fis = new FileInputStream(inputDirectory + filename);
-			byte[] temp = new byte[fis.available()];
-			fis.read(temp);
-			fis.close();
-			
-			isLoadedLocalSettingFile = true;
-			bbDeviceController.setAudioAutoConfig(new String(temp));
-			
-			new Handler().post(new Runnable() {
-				@Override
-				public void run() {
-					Toast.makeText(currentActivity, getString(R.string.setting_config), Toast.LENGTH_LONG).show();
-				}
-			});
-		} catch(Exception e) {
-		}
-		
-		//Create instance for AsyncCallWS
+        currentActivity = this;
+
+        try {
+            String filename = "settings.txt";
+            String inputDirectory = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.bbpos.bbdevice.ui/";
+            HLog.w(TAG,inputDirectory + filename);
+
+            FileInputStream fis = new FileInputStream(inputDirectory + filename);
+            byte[] temp = new byte[fis.available()];
+            fis.read(temp);
+            fis.close();
+
+            isLoadedLocalSettingFile = true;
+            HLog.w(TAG,new String(temp));
+            bbDeviceController.setAudioAutoConfig(new String(temp));
+
+            new Handler().post(new Runnable() {
+                @Override
+                public void run() {
+                    Toast.makeText(currentActivity, getString(R.string.setting_config), Toast.LENGTH_LONG).show();
+                }
+            });
+        } catch (Exception e) {
+        }
+
+        //Create instance for AsyncCallWS
         AsyncCallWS task = new AsyncCallWS();
         //Call execute 
         task.execute();
-	}
+    }
 
-	class MyOnClickListener implements OnClickListener {
+    class MyOnClickListener implements OnClickListener {
 
-		@Override
-		public void onClick(View v) {
-			statusEditText.setText("");
+        @Override
+        public void onClick(View v) {
+            statusEditText.setText("");
 
-			if (v == startButton) {
-				isPinCanceled = false;
-				amountEditText.setText("");
+            if (v == startButton) {
+                isPinCanceled = false;
+                amountEditText.setText("");
+                statusEditText.setText(R.string.starting);
 
-				statusEditText.setText(R.string.starting);
-				promptForStartEmv();
-				//promptForCheckCard();
-			}
-		}
-	}
-	
-	private class AsyncCallWS extends AsyncTask<String, Void, Void> {
-		@Override
-		protected Void doInBackground(String... params) {
-			if (isLoadedWebServiceAutoConfig == false) {
-				webAutoConfigString = WebService.invokeGetAutoConfigString(Build.MANUFACTURER.toUpperCase(Locale.US), Build.MODEL.toUpperCase(Locale.US), BBDeviceController.getApiVersion(), "getAutoConfigString");
-			}
-			return null;
-		}
+                promptForStartEmv();
+            } else if (v.getId() == R.id.checkButton) {
+                isPinCanceled = true;
+                promptForCheckCard();
+            } else if (v.getId() == R.id.startEmv) {
+                isPinCanceled = true;
+                promptForStartEmv();
+            }
+        }
+    }
 
-		@Override
-		protected void onPostExecute(Void result) {
-			if (isLoadedWebServiceAutoConfig == false) {
-				isLoadedWebServiceAutoConfig = true;
-				if (isLoadedLocalSettingFile == false) {
-					if (!webAutoConfigString.equalsIgnoreCase("Error occured") && !webAutoConfigString.equalsIgnoreCase("")) {
-						bbDeviceController.setAudioAutoConfig(webAutoConfigString);
-						
-						try {
-							String filename = "settings.txt";
-							String outputDirectory = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.bbpos.emvswipe.ui/";
+    private class AsyncCallWS extends AsyncTask<String, Void, Void> {
+        @Override
+        protected Void doInBackground(String... params) {
+            if (isLoadedWebServiceAutoConfig == false) {
+                webAutoConfigString = WebService.invokeGetAutoConfigString(Build.MANUFACTURER.toUpperCase(Locale.US),
+                        Build.MODEL.toUpperCase(Locale.US), BBDeviceController.getApiVersion(), "getAutoConfigString");
+                HLog.w(TAG,"getAutoConfigString---" + Build.MANUFACTURER.toUpperCase(Locale.US) + "\n" + Build.MODEL.toUpperCase(Locale.US) +
+                        "\n" + BBDeviceController.getApiVersion());
+            }
+            return null;
+        }
 
-							File directory = new File(outputDirectory);
-							if (!directory.isDirectory()) {
-								directory.mkdirs();
-							}
-							FileOutputStream fos = new FileOutputStream(outputDirectory + filename, true);
-							fos.write(webAutoConfigString.getBytes());
-							fos.flush();
-							fos.close();
-						} catch (Exception e) {
-						}
-						
-						new Handler().post(new Runnable() {
-							@Override
-							public void run() {
-								Toast.makeText(currentActivity, getString(R.string.setting_config_from_web_service), Toast.LENGTH_LONG).show();
-							}
-						});
-					}
-				}
-			}
-		}
+        @Override
+        protected void onPostExecute(Void result) {
+            if (isLoadedWebServiceAutoConfig == false) {
+                isLoadedWebServiceAutoConfig = true;
+                if (isLoadedLocalSettingFile == false) {
+                    if (!webAutoConfigString.equalsIgnoreCase("Error occured") && !webAutoConfigString.equalsIgnoreCase("")) {
+                        HLog.w(TAG,webAutoConfigString);
+                        bbDeviceController.setAudioAutoConfig(webAutoConfigString);
 
-		@Override
-		protected void onPreExecute() {
-		}
+                        try {
+                            String filename = "settings.txt";
+                            String outputDirectory = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Android/data/com.bbpos.emvswipe.ui/";
+                            File directory = new File(outputDirectory);
+                            HLog.w(TAG,"outputDirectory="+outputDirectory);
+                            if (!directory.isDirectory()) {
+                                directory.mkdirs();
+                            }
+                            FileOutputStream fos = new FileOutputStream(outputDirectory + filename, true);
+                            fos.write(webAutoConfigString.getBytes());
+                            HLog.w(TAG,webAutoConfigString.getBytes().toString());
+                            fos.flush();
+                            fos.close();
+                        } catch (Exception e) {
+                        }
 
-		@Override
-		protected void onProgressUpdate(Void... values) {
-		}
+                        new Handler().post(new Runnable() {
+                            @Override
+                            public void run() {
+                                Toast.makeText(currentActivity, getString(R.string.setting_config_from_web_service), Toast.LENGTH_LONG).show();
+                            }
+                        });
+                    }
+                }
+            }
+        }
 
-	}
+        @Override
+        protected void onPreExecute() {
+        }
+
+        @Override
+        protected void onProgressUpdate(Void... values) {
+        }
+
+    }
 }

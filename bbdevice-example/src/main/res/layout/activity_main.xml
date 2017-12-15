@@ -28,8 +28,22 @@
 	        android:text="@string/start" />
         
     </LinearLayout>
-    
-    
+<RelativeLayout
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content">
+	<Button
+		android:id="@+id/checkButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="checkcard" />
+	<Button
+		android:id="@+id/startEmv"
+		android:layout_toRightOf="@+id/checkButton"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="startEmv" />
+</RelativeLayout>
+
     
     <LinearLayout 
         android:layout_width="fill_parent"

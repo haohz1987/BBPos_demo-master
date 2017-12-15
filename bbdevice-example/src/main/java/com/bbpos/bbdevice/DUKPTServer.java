@@ -1,5 +1,8 @@
 package com.bbpos.bbdevice;
 
+import com.bbpos.bbdevice.util.DES;
+import com.bbpos.bbdevice.util.TripleDES;
+
 /**
  * @author Derek
  * 

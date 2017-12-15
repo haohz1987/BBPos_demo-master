@@ -1,4 +1,4 @@
-package com.bbpos.bbdevice;
+package com.bbpos.bbdevice.util;
 /**
  * @author Derek
  * 
