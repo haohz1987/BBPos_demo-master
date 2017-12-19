@@ -12,36 +12,89 @@
     <LinearLayout 
         android:layout_width="fill_parent"
 	    android:layout_height="wrap_content"
-	    android:orientation="horizontal">
+	    android:orientation="vertical">
 	    
         <Spinner
 	        android:id="@+id/fidSpinner"  
-	        android:layout_width="0dip"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1" />
-        
-        <Button 
-	        android:id="@+id/startButton"  
-	        android:layout_width="0dip"
-	        android:layout_height="wrap_content"
-	        android:layout_weight="1"
-	        android:text="@string/start" />
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"/>
+        <!---->
+        <!--<Button -->
+	        <!--android:id="@+id/startButton"  -->
+	        <!--android:layout_width="wrap_content"-->
+	        <!--android:layout_height="wrap_content"-->
+	        <!--android:text="@string/start" />-->
         
     </LinearLayout>
 <RelativeLayout
 	android:layout_width="wrap_content"
 	android:layout_height="wrap_content">
 	<Button
-		android:id="@+id/checkButton"
+		android:id="@+id/connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="connect" />
+	<Button
+		android:id="@+id/stop_connect"
+		android:layout_toRightOf="@+id/connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="stop_connect" />
+
+	<Button
+		android:id="@+id/for_amount"
+		android:layout_toRightOf="@+id/stop_connect"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="for_amount" />
+
+
+	<Button
+		android:id="@+id/checkcard"
+		android:layout_below="@+id/for_amount"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="checkcard" />
 	<Button
 		android:id="@+id/startEmv"
-		android:layout_toRightOf="@+id/checkButton"
+		android:layout_below="@+id/for_amount"
+		android:layout_toRightOf="@+id/checkcard"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="startEmv" />
+	<Button
+		android:id="@+id/for_session"
+		android:layout_below="@+id/for_amount"
+		android:layout_toRightOf="@+id/startEmv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="for_session" />
+	<Button
+		android:id="@+id/controll_led"
+		android:layout_below="@+id/for_session"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="controll_led" />
+	<Button
+		android:id="@+id/readAID"
+		android:layout_below="@+id/for_session"
+		android:layout_toRightOf="@+id/controll_led"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="readAID" />
+	<Button
+		android:id="@+id/updateAID"
+		android:layout_below="@+id/for_session"
+		android:layout_toRightOf="@+id/readAID"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="updateAID" />
+	<Button
+		android:id="@+id/print"
+		android:layout_below="@+id/updateAID"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="print" />
 </RelativeLayout>
 
     

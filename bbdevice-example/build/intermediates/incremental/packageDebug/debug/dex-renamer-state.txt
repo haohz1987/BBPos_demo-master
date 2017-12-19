@@ -1,4 +1,4 @@
-#Fri Dec 15 17:00:43 CST 2017
+#Mon Dec 18 11:36:25 CST 2017
 base.0=C\:\\Users\\hzhao\\Desktop\\BBPos_demo-master\\bbdevice-example\\build\\intermediates\\transforms\\dexMerger\\debug\\19
 path.0=classes.dex
 renamed.0=classes.dex

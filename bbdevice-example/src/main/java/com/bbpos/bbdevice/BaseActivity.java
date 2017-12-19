@@ -242,7 +242,7 @@ public class BaseActivity extends Activity {
     }
 
     public String encrypt(String data, String key) {
-        HLog.w(TAG,"data="+data+"\nkey="+key);
+        HLog.w(TAG,"encrypt__data="+data+"\nkey="+key);
         if (key.length() == 16) {
             key += key.substring(0, 8);
         }
@@ -332,7 +332,7 @@ public class BaseActivity extends Activity {
 
     public void stopConnection() {
         ConnectionMode connectionMode = bbDeviceController.getConnectionMode();
-        HLog.w(TAG,"stopConnection:" + connectionMode);
+        HLog.w(TAG,"stopConnection__connectionMode=" + connectionMode);
         if (connectionMode == ConnectionMode.BLUETOOTH) {
             bbDeviceController.disconnectBT();
         } else if (connectionMode == ConnectionMode.AUDIO) {
@@ -450,7 +450,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForAmount() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForAmount");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.amount_dialog);
@@ -535,6 +535,7 @@ public class BaseActivity extends Activity {
                     currentActivity.amount = amount;
                     currentActivity.cashbackAmount = cashbackAmount;
                     statusEditText.setText(getString(R.string.please_confirm_amount));
+
                     dismissDialog();
                 } else {
                     promptForAmount();
@@ -558,7 +559,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForCheckCard() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForCheckCard");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.check_card_mode_dialog);
@@ -622,7 +623,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForStartEmv() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForStartEmv");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.check_card_mode_dialog);
@@ -684,7 +685,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForGprs() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForGprs");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.gprs_dialog);
@@ -731,7 +732,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForWifi() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForWifi");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.wifi_dialog);
@@ -789,7 +790,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForInitSession() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForInitSession");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -844,7 +845,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForStartNfcDetection() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForStartNfcDetection");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -910,7 +911,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForStopNfcDetection() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForStopNfcDetection");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -971,7 +972,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForNfcDataExchangeWrite() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForNfcDataExchangeWrite");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -1098,7 +1099,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForNfcDataExchangeRead1St() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForNfcDataExchangeRead1St");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -1220,7 +1221,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForNfcDataExchangeReadNext() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForNfcDataExchangeReadNext");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -1343,7 +1344,7 @@ public class BaseActivity extends Activity {
 
 
     public void promptForReadAID() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForReadAID");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -1398,7 +1399,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForUpdateAID() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForUpdateAID");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.general_string_input_dialog);
@@ -1592,7 +1593,7 @@ public class BaseActivity extends Activity {
     }
 
     public void promptForControlLED() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"promptForControlLED");
         dismissDialog();
         dialog = new Dialog(currentActivity);
         dialog.setContentView(R.layout.control_led_dialog);
@@ -1748,32 +1749,35 @@ public class BaseActivity extends Activity {
 
 
     public void checkCard() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"checkCard");
         Hashtable<String, Object> data = new Hashtable<String, Object>();
         if (checkCardMode != null) {
             data.put("checkCardMode", checkCardMode);
         }
         data.put("checkCardMode", checkCardMode);
         data.put("checkCardTimeout", "120");
-        if (fidSpinner.getSelectedItem().equals("FID61")) {
+        if (fidSpinner.getSelectedItem().equals("FID61_orderID_randomNumber")) {
             data.put("orderID", "0123456789ABCDEF0123456789ABCDEF");
             data.put("randomNumber", "012345");
-        } else if (fidSpinner.getSelectedItem().equals("FID46")) {
+            Toast.makeText(this,"orderID__randomNumber",Toast.LENGTH_LONG).show();
+        } else if (fidSpinner.getSelectedItem().equals("FID46_randomNumber")) {
             data.put("randomNumber", "0123456789ABCDEF");
-        } else if (fidSpinner.getSelectedItem().equals("FID65")) {
+            Toast.makeText(this,"only__randomNumber",Toast.LENGTH_LONG).show();
+        } else if (fidSpinner.getSelectedItem().equals("FID65_pin_data_mac")) {
             String encWorkingKey = TripleDES.encrypt(fid65WorkingKey, fid65MasterKey);
             String workingKeyKcv = TripleDES.encrypt("0000000000000000", fid65WorkingKey);
 
             data.put("encPinKey", encWorkingKey + workingKeyKcv);
             data.put("encDataKey", encWorkingKey + workingKeyKcv);
             data.put("encMacKey", encWorkingKey + workingKeyKcv);
+            Toast.makeText(this,"encPinKey__encDataKey__encMacKey",Toast.LENGTH_LONG).show();
         }
         HLog.w(TAG,data.toString());
         bbDeviceController.checkCard(data);
     }
 
     public void startEmv() {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"startEmv");
         Hashtable<String, Object> data = new Hashtable<String, Object>();
         data.put("emvOption", EmvOption.START);
         if (fidSpinner.getSelectedItem().equals("FID61")) {
@@ -1801,7 +1805,7 @@ public class BaseActivity extends Activity {
     }
 
     private static String hexString2AsciiString(String hexString) {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"hexString2AsciiString__hexString="+hexString);
         if (hexString == null)
             return "";
         hexString = hexString.replaceAll(" ", "");
@@ -1817,7 +1821,7 @@ public class BaseActivity extends Activity {
     }
 
     private static byte[] hexToByteArray(String s) {
-        HLog.w(TAG,"");
+        HLog.w(TAG,"hexToByteArray="+s);
         if (s == null) {
             s = "";
         }
@@ -1841,6 +1845,7 @@ public class BaseActivity extends Activity {
     }
 
     public static void setStatus(String message) {
+        HLog.w(TAG,"setStatus="+message+"\nstatusEditText=" + statusEditText.getText());
         String tmp = message + "\n" + statusEditText.getText();
         int maxLength = 20000;
         if (tmp.length() >= maxLength) {
@@ -2409,6 +2414,7 @@ public class BaseActivity extends Activity {
             statusEditText.setText("" + checkCardResult + "\n");
             if (checkCardResult == CheckCardResult.NO_CARD) {
             } else if (checkCardResult == CheckCardResult.INSERTED_CARD) {
+
             } else if (checkCardResult == CheckCardResult.NOT_ICC) {
             } else if (checkCardResult == CheckCardResult.BAD_SWIPE) {
             } else if (checkCardResult == CheckCardResult.MSR) {
@@ -2482,13 +2488,10 @@ public class BaseActivity extends Activity {
                 }
                 isPinCanceled=false;
                 promptForStartEmv();
-
-
                 statusEditText.setText(content);
             } else if (checkCardResult == CheckCardResult.MAG_HEAD_FAIL) {
             } else if (checkCardResult == CheckCardResult.USE_ICC_CARD) {
                 String content = "" + checkCardResult + "\n";
-
                 if (decodeData != null) {
                     String formatID = decodeData.get("formatID");
                     final String maskedPAN = decodeData.get("maskedPAN");
@@ -2733,6 +2736,7 @@ public class BaseActivity extends Activity {
         @Override
         public void onReturnAmountConfirmResult(boolean isSuccess) {
             HLog.w(TAG,"onReturnAmountConfirmResult-"+isSuccess);
+
             if (isSuccess) {
                 statusEditText.setText(getString(R.string.amount_confirmed));
             } else {
@@ -3035,6 +3039,7 @@ public class BaseActivity extends Activity {
         public void onRequestSetAmount() {
             HLog.w(TAG,"onRequestSetAmount-");
             promptForAmount();
+
         }
 
         @Override
@@ -3147,7 +3152,7 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onRequestClearDisplay() {
-            HLog.w(TAG,"onRequestDisplayText-"+);
+            HLog.w(TAG,"onRequestDisplayText-");
             dismissDialog();
             statusEditText.setText("");
         }
@@ -3229,17 +3234,20 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onAudioDevicePlugged() {
+            HLog.w(TAG,"onAudioDevicePlugged-");
 
             statusEditText.setText(getString(R.string.device_plugged));
         }
 
         @Override
         public void onAudioDeviceUnplugged() {
+
             statusEditText.setText(getString(R.string.device_unplugged));
         }
 
         @Override
         public void onError(Error errorState, String errorMessage) {
+            HLog.w(TAG,"onError-errorState="+errorState+"\nerrorMessage="+errorMessage);
             dismissDialog();
             if (progressDialog != null) {
                 progressDialog.dismiss();
@@ -3279,10 +3287,12 @@ public class BaseActivity extends Activity {
                 content = getString(R.string.invalid_function);
             } else if (errorState == Error.COMM_LINK_UNINITIALIZED) {
                 content = getString(R.string.comm_link_uninitialized);
-            } else if (errorState == Error.BTV4_NOT_SUPPORTED) {
+            }
+            else if (errorState == Error.BTV4_NOT_SUPPORTED) {
                 content = getString(R.string.bluetooth_4_not_supported);
                 Toast.makeText(currentActivity, getString(R.string.bluetooth_4_not_supported), Toast.LENGTH_LONG).show();
-            } else if (errorState == Error.CHANNEL_BUFFER_FULL) {
+            }
+            else if (errorState == Error.CHANNEL_BUFFER_FULL) {
                 content = getString(R.string.channel_buffer_full);
             } else if (errorState == Error.BLUETOOTH_PERMISSION_DENIED) {
                 content = getString(R.string.bluetooth_permission_denied);
@@ -3403,11 +3413,14 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onSessionInitialized() {
+            HLog.w(TAG,"onSessionInitialized-");
             setStatus(getString(R.string.session_initialized));
         }
 
         @Override
         public void onSessionError(SessionError sessionError, String errorMessage) {
+            HLog.w(TAG,"onSessionError-sessionError="+sessionError
+            +"\nerrorMessage="+errorMessage);
             if (sessionError == SessionError.FIRMWARE_NOT_SUPPORTED) {
                 setStatus(getString(R.string.session_error_firmware_not_supported));
             } else if (sessionError == SessionError.INVALID_SESSION) {
@@ -3422,6 +3435,9 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnReadGprsSettingsResult(boolean isSuccess, Hashtable<String, Object> data) {
+            HLog.w(TAG,"onReturnReadGprsSettingsResult-isSuccess="+isSuccess
+                    +"\ndata="+data.toString());
+
             if (isSuccess) {
                 String text = getString(R.string.read_gprs_setting_success);
                 text += "\n" + getString(R.string.operator) + (String) data.get("operator");
@@ -3466,6 +3482,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnReadWiFiSettingsResult(boolean isSuccess, Hashtable<String, Object> data) {
+            HLog.w(TAG,"onReturnReadWiFiSettingsResult-isSuccess="+isSuccess
+                    +"\ndata="+data.toString());
             if (isSuccess) {
                 String text = getString(R.string.read_wifi_setting_success);
                 text += "\n" + getString(R.string.ssid) + data.get("ssid");
@@ -3515,6 +3533,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnUpdateGprsSettingsResult(boolean isSuccess, Hashtable<String, TerminalSettingStatus> data) {
+            HLog.w(TAG,"onReturnUpdateGprsSettingsResult-isSuccess="+isSuccess
+                    +"\ndata="+data.toString());
             if (isSuccess) {
                 String text = getString(R.string.update_gprs_setting_success);
                 setStatus(text);
@@ -3527,6 +3547,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnUpdateWiFiSettingsResult(boolean isSuccess, Hashtable<String, TerminalSettingStatus> data) {
+            HLog.w(TAG,"onReturnUpdateWiFiSettingsResult-isSuccess="+isSuccess
+                    +"\ndata="+data.toString());
             if (isSuccess) {
                 String text = getString(R.string.update_wifi_setting_success);
                 setStatus(text);
@@ -3572,6 +3594,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onAudioAutoConfigCompleted(boolean isDefaultSettings, String autoConfigSettings) {
+            HLog.w(TAG,"onAudioAutoConfigCompleted-isDefaultSettings="+isDefaultSettings
+                    +"\nautoConfigSettings="+autoConfigSettings);
             if (progressDialog != null) {
                 progressDialog.dismiss();
                 progressDialog = null;
@@ -3605,6 +3629,7 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onAudioAutoConfigError(AudioAutoConfigError autoConfigError) {
+            HLog.w(TAG,"onAudioAutoConfigError-autoConfigError="+autoConfigError);
             if (progressDialog != null) {
                 progressDialog.dismiss();
                 progressDialog = null;
@@ -3619,6 +3644,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onAudioAutoConfigProgressUpdate(double percentage) {
+            HLog.w(TAG,"onAudioAutoConfigProgressUpdate-percentage="+percentage);
+
             if (progressDialog != null) {
                 progressDialog.setProgress((int) percentage);
             }
@@ -3626,10 +3653,14 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onDeviceHere(boolean arg0) {
+            HLog.w(TAG,"onDeviceHere-arg0="+arg0);
+
         }
 
         @Override
         public void onNoAudioDeviceDetected() {
+
+            HLog.w(TAG,"onNoAudioDeviceDetected-");
             dismissDialog();
             if (progressDialog != null) {
                 progressDialog.dismiss();
@@ -3646,6 +3677,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnNfcDataExchangeResult(boolean isSuccess, Hashtable<String, String> data) {
+            HLog.w(TAG,"onReturnNfcDataExchangeResult-isSuccess="+isSuccess
+                    +"\ndata="+data.toString());
             if (isSuccess) {
                 String text = getString(R.string.nfc_data_exchange_success);
                 text += "\n" + getString(R.string.ndef_record) + data.get("ndefRecord");
@@ -3659,6 +3692,8 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onReturnNfcDetectCardResult(NfcDetectCardResult nfcDetectCardResult, Hashtable<String, Object> data) {
+            HLog.w(TAG,"onReturnNfcDetectCardResult-nfcDetectCardResult="+nfcDetectCardResult.toString()
+                    +"\ndata="+data.toString());
             String text = "";
             text += getString(R.string.nfc_card_detection_result) + nfcDetectCardResult;
             text += "\n" + getString(R.string.nfc_tag_information) + data.get("nfcTagInfo");
@@ -3671,20 +3706,24 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onUsbConnected() {
+            HLog.w(TAG,"onUsbConnected-");
             setStatus(getString(R.string.usb_connected));
         }
 
         @Override
         public void onUsbDisconnected() {
+            HLog.w(TAG,"onUsbDisconnected-");
             setStatus(getString(R.string.usb_disconnected));
         }
 
         @Override
         public void onRequestDisplayAsterisk(int arg0) {
+            HLog.w(TAG,"onRequestDisplayAsterisk-arg0="+arg0);
         }
 
         @Override
         public void onSerialConnected() {
+            HLog.w(TAG,"onSerialConnected-");
             final ProgressDialog progressDialog = ProgressDialog.show(BaseActivity.this, getString(R.string.please_wait), getString(R.string.initializing));
             new Thread(new Runnable() {
                 @Override
@@ -3707,31 +3746,39 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onSerialDisconnected() {
+            HLog.w(TAG,"onSerialDisconnected-");
             setStatus(getString(R.string.serial_disconnected));
         }
 
         @Override
         public void onBarcodeReaderConnected() {
+            HLog.w(TAG,"onBarcodeReaderConnected-");
         }
 
         @Override
         public void onBarcodeReaderDisconnected() {
+            HLog.w(TAG,"onBarcodeReaderDisconnected-");
         }
 
         @Override
         public void onReturnBarcode(String arg0) {
+            HLog.w(TAG,"onReturnBarcode-arg0="+arg0);
         }
 
         @Override
-        public void onRequestDisplayLEDIndicator(ContactlessStatus arg0) {
+        public void onRequestDisplayLEDIndicator(ContactlessStatus contactlessStatus) {
+            HLog.w(TAG,"onRequestDisplayLEDIndicator-contactlessStatus="+contactlessStatus);
         }
 
         @Override
-        public void onRequestProduceAudioTone(ContactlessStatusTone arg0) {
+        public void onRequestProduceAudioTone(ContactlessStatusTone contactlessStatusTone) {
+            HLog.w(TAG,"onRequestProduceAudioTone-contactlessStatusTone="+contactlessStatusTone);
         }
 
         @Override
         public void onReturnReadAIDResult(Hashtable<String, Object> data) {
+            HLog.w(TAG,"onReturnReadAIDResult-data="+data.toString());
+
             String text = getString(R.string.read_aid_success);
 
             Object[] keys = data.keySet().toArray();
@@ -3747,12 +3794,13 @@ public class BaseActivity extends Activity {
                     text += ((TerminalSettingStatus) obj) + "";
                 }
             }
-
+            HLog.w(TAG,"onReturnReadAIDResult-text="+text);
             setStatus(text);
         }
 
         @Override
         public void onReturnUpdateAIDResult(Hashtable<String, TerminalSettingStatus> data) {
+            HLog.w(TAG,"onReturnUpdateAIDResult-data="+data.toString());
             String text = getString(R.string.update_aid_success);
 
             Object[] keys = data.keySet().toArray();
@@ -3774,42 +3822,53 @@ public class BaseActivity extends Activity {
 
         @Override
         public void onDeviceReset() {
+            HLog.w(TAG,"onDeviceReset-");
             setStatus(getString(R.string.device_reset));
         }
 
         @Override
         public void onPowerButtonPressed() {
+            HLog.w(TAG,"onPowerButtonPressed-");
             setStatus(getString(R.string.power_button_pressed));
         }
 
         @Override
         public void onPowerDown() {
+            HLog.w(TAG,"onPowerDown-");
             setStatus(getString(R.string.power_down));
         }
 
         @Override
         public void onEnterStandbyMode() {
+            HLog.w(TAG,"onEnterStandbyMode-");
             setStatus(getString(R.string.enter_standby_mode));
         }
 
         @Override
         public void onReturnAccountSelectionResult(AccountSelectionResult accountSelectionResult, int selectedAccountType) {
+            HLog.w(TAG,"onReturnAccountSelectionResult-accountSelectionResult="+accountSelectionResult.toString()
+                    +"\nselectedAccountType="+selectedAccountType);
         }
 
         @Override
         public void onReturnDisableAccountSelectionResult(boolean isSuccess) {
+            HLog.w(TAG,"onReturnDisableAccountSelectionResult-isSuccess"+isSuccess);
         }
 
         @Override
         public void onReturnEnableAccountSelectionResult(boolean isSuccess) {
+            HLog.w(TAG,"onReturnEnableAccountSelectionResult-isSuccess"+isSuccess);
         }
 
         @Override
         public void onRequestStartEmv() {
+            HLog.w(TAG,"onRequestStartEmv-");
         }
 
         @Override
         public void onReturnControlLEDResult(boolean isSuccess, String errorMessage) {
+            HLog.w(TAG,"onReturnControlLEDResult-isSuccess="+isSuccess
+                    +"\nerrorMessage="+errorMessage);
             if (isSuccess) {
                 setStatus(getString(R.string.control_led_success));
             } else {
@@ -3818,7 +3877,10 @@ public class BaseActivity extends Activity {
         }
 
         @Override
-        public void onReturnVasResult(VASResult arg0, Hashtable<String, Object> arg1) {
+        public void onReturnVasResult(VASResult vasResult, Hashtable<String, Object> data) {
+            HLog.w(TAG,"onReturnVasResult-vasResult="+vasResult
+                    +"\ndata="+data.toString());
+
         }
     }
 }

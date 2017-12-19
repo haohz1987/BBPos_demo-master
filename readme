@@ -1,7 +1,16 @@
 bbpos 最新版
 
-其中 
+﻿﻿{
+    "response": "0",
+    "status": "success",
+    "date": "2017-12-18",
+    "results": {
+	"creditCard": "000011",
+	"logo": "http://api.map.baidu.com/images/weather/day/duoyun.png"，
+    "name": "张三"，
+	 "cardType": "普通会员卡"，
+	 "rebate": "9.0折"，
 
-SDK：3.2.2
+	}
 
-固件：0.06.35.80
+}
